@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
 import {FaBars, FaTimes, FaGithub, FaLinkedin} from 'react-icons/fa'
 import {HiOutlineMail} from 'react-icons/hi'
-import {BsFillPersonLinesFill} from 'react-icons/bs'
-import {FaFacebook} from 'react-icons/fa'
+//import {BsFillPersonLinesFill} from 'react-icons/bs' resume icon
 import Logo from '../assets/logo.png'
 import {Link} from 'react-scroll'
+
 
 const Navbar = () => {
     const [nav, setNav] = useState(false)
@@ -12,9 +12,11 @@ const Navbar = () => {
 
 
   return (
-    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
+    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0f0f0f] text-gray-300'>
         <div>
+        <Link to="home" smooth={true} duration={500}>
         <img src={Logo} alt="Logo Image" style={{width: '60px'}} />
+        </Link>
         </div>
 
     {/* menu */}
@@ -84,28 +86,29 @@ const Navbar = () => {
     <ul>
         <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
             <a className='flex justify-between items-center w-full text-gray-300'
-            href="/">
+            href="https://linkedin.com/in/mat-jab"  target="_blank">
                 Linkedin <FaLinkedin size={30} />
             </a>
         </li>
         <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
             <a className='flex justify-between items-center w-full text-gray-300'
-            href="/">
+            href="https://github.com/Kuxwpel" target="_blank">
                 Github <FaGithub size={30} />
             </a>
         </li>
         <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]'>
-            <a className='flex justify-between items-center w-full text-gray-300'
-            href="/">
+        <Link to="contact" smooth={true} duration={500} className='flex justify-between items-center w-full text-gray-300'>
                 Email <HiOutlineMail size={30} />
-            </a>
+        </Link>
         </li>
+        {/* Resume 
         <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
             <a className='flex justify-between items-center w-full text-gray-300'
             href="/">
                 Resume <BsFillPersonLinesFill size={30} />
             </a>
         </li>
+        */}
     </ul>
 
     </div>
