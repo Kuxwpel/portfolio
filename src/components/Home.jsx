@@ -20,7 +20,6 @@ const Home = () => {
                 <span className='group-hover:rotate-90 duration-300'>
                     <HiArrowNarrowRight className='ml-3' />
                 </span>
-                
                 </button>
                 </Link>
             </div>
